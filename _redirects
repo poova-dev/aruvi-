@@ -1,0 +1,6 @@
+# Cloudflare Pages Clean URL Rewrites & Redirect Rules
+/shop        /shop.html       200
+/collection  /collection.html 200
+/product     /product.html    200
+/cart        /cart.html       200
+/wishlist    /wishlist.html   200
