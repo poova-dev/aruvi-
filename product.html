@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabric Details — Aruvi Fabrics</title>
+  <meta name="description" content="View detailed product specifications, color variants, pricing, and order directly on WhatsApp with Aruvi Fabrics." />
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#faf9f8",
+            "on-surface": "#1a1c1c",
+            "outline-variant": "#c4c7c7",
+            "surface-dim": "#dadad9",
+            "on-primary": "#ffffff",
+            "primary": "#000000",
+            "secondary": "#805345",
+            "accent": "#c85a32",
+            "surface-container-high": "#e9e8e7",
+            "surface-container-low": "#f4f3f2",
+            "surface-container": "#eeeeed",
+            "on-surface-variant": "#444748"
+          },
+          fontFamily: {
+            "headline-md": ["Playfair Display", "serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "label-caps": ["Inter", "sans-serif"],
+            "headline-lg": ["Playfair Display", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-28 md:pt-[116px] pb-[80px] md:pb-0">
+
+  <!-- Top Sticky Header Container -->
+  <header class="fixed top-0 w-full z-50 bg-surface-bright/95 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-300">
+    <div class="bg-primary text-on-primary py-2 px-4 text-center font-label-caps text-[11px] uppercase tracking-widest flex justify-center items-center gap-4 border-b border-white/10">
+      <span>Pattukkottai Heritage Weaves — Pure Silk & Cotton</span>
+      <span class="hidden md:inline text-accent">•</span>
+      <span class="hidden md:inline">Worldwide Shipping Available</span>
+      <span class="hidden md:inline text-accent">•</span>
+      <a href="https://wa.me/919677596136" target="_blank" class="text-accent hover:underline flex items-center gap-1">
+        <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp: +91 96775 96136
+      </a>
+    </div>
+
+    <div class="flex justify-between items-center px-6 md:px-16 h-20 max-w-[1440px] mx-auto hidden md:flex">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="h-10 w-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-serif font-bold text-lg tracking-wider group-hover:bg-accent transition-colors">A</div>
+          <span class="text-2xl font-headline-lg font-bold text-primary uppercase tracking-widest">Aruvi Fabrics</span>
+        </a>
+      </div>
+      
+      <nav class="flex gap-8 items-center">
+        <a href="index.html" class="nav-link font-label-caps text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-1">HOME</a>
+        <a href="shop.html" class="nav-link font-label-caps text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-1">SHOP</a>
+        <a href="collection.html" class="nav-link font-label-caps text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-1">COLLECTIONS</a>
+        <a href="index.html#about" class="nav-link font-label-caps text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-1">ABOUT</a>
+        <a href="index.html#reviews" class="nav-link font-label-caps text-xs uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-1">REVIEWS</a>
+      </nav>
+      
+      <div class="flex items-center gap-5">
+        <button class="open-search-btn text-primary hover:text-accent transition-colors p-2" aria-label="Search">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+        <a href="wishlist.html" class="relative text-primary hover:text-accent transition-colors p-2" aria-label="Wishlist">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-accent text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="cart.html" class="relative text-primary hover:text-accent transition-colors p-2" aria-label="Cart">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="https://wa.me/919677596136?text=Hi%20Aruvi%20Fabrics%2C%20I%20would%20like%20to%20enquire%20about%20your%20textile%20collections." 
+           target="_blank" 
+           class="bg-primary text-on-primary px-5 py-2.5 rounded text-xs font-label-caps uppercase tracking-widest hover:bg-accent transition-all flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center px-6 h-16 md:hidden">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-serif font-bold text-sm">A</div>
+        <span class="text-xl font-serif font-bold text-primary uppercase tracking-widest">Aruvi</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <button class="open-search-btn text-primary p-2" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
+        <a href="wishlist.html" class="relative text-primary p-2" aria-label="Wishlist">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="wishlist-count-badge hidden absolute top-0 right-1 bg-accent text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="cart.html" class="relative text-primary p-2" aria-label="Cart">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-count-badge hidden absolute top-0 right-1 bg-accent text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Details Dynamic Container -->
+  <main class="flex-grow max-w-[1440px] mx-auto w-full px-6 md:px-16 py-10">
+    <div id="product-detail-container" class="animate-fade-in-up">
+      <!-- Injected dynamically via app.js parsing ?id=ARV-xxx -->
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="w-full bg-surface-container-low text-primary border-t border-outline-variant/30 mt-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-16 py-16 max-w-[1440px] mx-auto">
+      <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-serif font-bold text-base tracking-wider">A</div>
+          <span class="font-headline-lg text-2xl font-bold uppercase tracking-widest">Aruvi Fabrics</span>
+        </div>
+        <p class="font-body-md text-on-surface-variant max-w-sm text-sm leading-relaxed">Curating the finest heritage textiles for the modern wardrobe. Elegance woven into every thread.</p>
+        <p class="font-body-md text-xs text-on-surface-variant font-medium">Pattukkottai, Tamil Nadu, India</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <h4 class="font-label-caps text-xs text-on-surface-variant uppercase tracking-widest font-semibold mb-2">Navigation</h4>
+        <a href="index.html" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">Home Page</a>
+        <a href="shop.html" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">Shop Catalog</a>
+        <a href="collection.html" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">Collections</a>
+        <a href="wishlist.html" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">Wishlist</a>
+        <a href="cart.html" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">Shopping Cart</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <h4 class="font-label-caps text-xs text-on-surface-variant uppercase tracking-widest font-semibold mb-2">Connect</h4>
+        <a href="https://wa.me/919677596136" target="_blank" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2"><i class="fa-brands fa-whatsapp text-accent"></i> WhatsApp Order Enquiry (+91 96775 96136)</a>
+        <a href="https://www.instagram.com/aruvi_fabric/" target="_blank" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2"><i class="fa-brands fa-instagram text-accent"></i> @aruvi_fabric</a>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/20">
+      <div class="px-6 md:px-16 py-6 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant">
+        <p>© 2026 Aruvi Fabrics. All rights reserved.</p>
+        <p class="uppercase tracking-widest font-medium">Heritage Textiles from Pattukkottai</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-2.5 px-4 bg-surface-bright border-t border-outline-variant/20 shadow-lg md:hidden">
+    <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary p-1">
+      <span class="material-symbols-outlined text-xl">home</span>
+      <span class="font-label-caps text-[10px]">Home</span>
+    </a>
+    <a href="shop.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary p-1">
+      <span class="material-symbols-outlined text-xl">grid_view</span>
+      <span class="font-label-caps text-[10px]">Shop</span>
+    </a>
+    <a href="wishlist.html" class="relative flex flex-col items-center justify-center text-on-surface-variant hover:text-primary p-1">
+      <span class="material-symbols-outlined text-xl">favorite</span>
+      <span class="wishlist-count-badge hidden absolute top-0 right-1 bg-accent text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+      <span class="font-label-caps text-[10px]">Saved</span>
+    </a>
+    <a href="cart.html" class="relative flex flex-col items-center justify-center text-on-surface-variant hover:text-primary p-1">
+      <span class="material-symbols-outlined text-xl">shopping_bag</span>
+      <span class="cart-count-badge hidden absolute top-0 right-1 bg-accent text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+      <span class="font-label-caps text-[10px]">Cart</span>
+    </a>
+  </nav>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" class="modal-backdrop">
+    <div class="modal-panel bg-surface-bright max-w-2xl w-full mx-4 my-20 p-6 rounded-xl shadow-2xl border border-hairline flex flex-col gap-4">
+      <div class="flex justify-between items-center border-b border-hairline pb-4">
+        <h3 class="font-headline-md text-xl font-bold">Search Fabric Catalog</h3>
+        <button id="close-search-btn" class="p-2 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="relative">
+        <span class="material-symbols-outlined absolute left-3 top-3.5 text-on-surface-variant">search</span>
+        <input id="search-input" type="text" placeholder="Search by weave, silk, cotton, indigo..." 
+               class="w-full pl-11 pr-4 py-3 bg-surface-container rounded border border-hairline focus:outline-none focus:border-primary text-sm" />
+      </div>
+      <div id="search-results" class="max-h-[350px] overflow-y-auto flex flex-col gap-2 pt-2"></div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
