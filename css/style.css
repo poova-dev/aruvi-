@@ -180,7 +180,8 @@ body {
   transition: opacity 0.35s ease;
 }
 
-.modal-backdrop.active {
+.modal-backdrop.active,
+.modal-backdrop.open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -190,7 +191,8 @@ body {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.modal-backdrop.active .modal-panel {
+.modal-backdrop.active .modal-panel,
+.modal-backdrop.open .modal-panel {
   transform: scale(1) translateY(0);
 }
 

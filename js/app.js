@@ -305,12 +305,16 @@
       };
 
       modal.classList.add('open');
+      modal.classList.add('active');
     }
   };
 
   function closeQuickViewModal() {
     const modal = document.getElementById('quickview-modal');
-    if (modal) modal.classList.remove('open');
+    if (modal) {
+      modal.classList.remove('open');
+      modal.classList.remove('active');
+    }
   }
   window.closeQuickViewModal = closeQuickViewModal;
 
@@ -716,14 +720,36 @@
     renderCatalog();
 
     // Category Filter Buttons
-    document.querySelectorAll('.shop-filter-btn').forEach(btn => {
+    document.querySelectorAll('.category-filter-btn, .shop-filter-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        activeCategory = e.currentTarget.getAttribute('data-category');
-        document.querySelectorAll('.shop-filter-btn').forEach(b => b.classList.remove('font-bold', 'border-b-2', 'border-primary'));
-        e.currentTarget.classList.add('font-bold', 'border-b-2', 'border-primary');
+        activeCategory = e.currentTarget.getAttribute('data-category') || 'all';
+        document.querySelectorAll('.category-filter-btn, .shop-filter-btn').forEach(b => {
+          b.classList.remove('active', 'bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        e.currentTarget.classList.add('active', 'bg-primary', 'text-on-primary');
+        e.currentTarget.classList.remove('bg-surface-container', 'text-on-surface-variant');
         renderCatalog();
       });
     });
+
+    // Sort Select Control
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+      sortSelect.addEventListener('change', (e) => {
+        const val = e.target.value;
+        if (val === 'price-low') {
+          ARUVI_PRODUCTS.sort((a, b) => a.price - b.price);
+        } else if (val === 'price-high') {
+          ARUVI_PRODUCTS.sort((a, b) => b.price - a.price);
+        } else if (val === 'rating') {
+          ARUVI_PRODUCTS.sort((a, b) => b.rating - a.rating);
+        } else {
+          ARUVI_PRODUCTS.sort((a, b) => a.id.localeCompare(b.id));
+        }
+        renderCatalog();
+      });
+    }
   }
 
 })();
