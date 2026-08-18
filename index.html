@@ -49,17 +49,17 @@
   
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="antialiased min-h-screen flex flex-col pt-28 md:pt-[116px] pb-[80px] md:pb-0">
+<body class="antialiased min-h-screen flex flex-col pt-16 md:pt-[116px] pb-[80px] md:pb-0">
 
   <!-- Top Sticky Header Container (Announcement + Navbar Unified) -->
   <header class="fixed top-0 w-full z-50 bg-surface-bright/95 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-300">
     
-    <!-- Top Announcement Ticker Bar -->
-    <div class="bg-primary text-on-primary py-2 px-4 text-center font-label-caps text-[11px] uppercase tracking-widest flex justify-center items-center gap-4 border-b border-white/10">
+    <!-- Top Announcement Bar (DESKTOP ONLY - HIDDEN ON MOBILE) -->
+    <div class="bg-primary text-on-primary py-2 px-4 text-center font-label-caps text-[11px] uppercase tracking-widest hidden md:flex justify-center items-center gap-4 border-b border-white/10">
       <span>Pattukkottai Heritage Weaves — Pure Silk & Cotton</span>
-      <span class="hidden md:inline text-accent">•</span>
-      <span class="hidden md:inline">Worldwide Shipping Available</span>
-      <span class="hidden md:inline text-accent">•</span>
+      <span class="text-accent">•</span>
+      <span>Worldwide Shipping Available</span>
+      <span class="text-accent">•</span>
       <a href="https://wa.me/919677596136" target="_blank" class="text-accent hover:underline flex items-center gap-1">
         <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp: +91 96775 96136
       </a>
@@ -186,7 +186,7 @@
       </div>
     </section>
 
-    <!-- Best Sellers Showcase with LIVE COLOR SWATCHES -->
+    <!-- Best Sellers Showcase -->
     <section class="py-20 px-6 md:px-16 bg-surface-container-low/50 border-t border-outline-variant/10">
       <div class="max-w-[1440px] mx-auto flex flex-col gap-12">
         <div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
@@ -197,10 +197,8 @@
           <a href="shop.html" class="hidden md:inline-block font-label-caps text-xs text-on-surface-variant uppercase tracking-wider hover:text-primary transition-colors">View All Products →</a>
         </div>
 
-        <!-- Product Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Card 1: Midnight Charcoal Cotton -->
+          <!-- Card 1 -->
           <article class="product-card flex flex-col bg-surface-bright border border-hairline rounded overflow-hidden group hover:shadow-diffused transition-all duration-500" data-product-id="ARV-001" data-selected-color="Charcoal">
             <div class="w-full aspect-[3/4] relative bg-surface-container overflow-hidden">
               <img class="product-card-img w-full h-full object-cover variant-img-fade group-hover:scale-105 transition-transform duration-700 ease-in-out" 
@@ -226,7 +224,6 @@
                 <div class="font-body-md text-sm font-bold text-primary mt-1 mb-3">₹3,450 / meter</div>
               </div>
 
-              <!-- Swatches -->
               <div class="flex items-center justify-between border-t border-hairline pt-3">
                 <span class="selected-color-label font-label-caps text-[10px] text-on-surface-variant">Charcoal</span>
                 <div class="flex gap-2">
@@ -238,7 +235,7 @@
             </div>
           </article>
 
-          <!-- Card 2: Pure Kanjivaram Silk -->
+          <!-- Card 2 -->
           <article class="product-card flex flex-col bg-surface-bright border border-hairline rounded overflow-hidden group hover:shadow-diffused transition-all duration-500" data-product-id="ARV-002" data-selected-color="Emerald Gold">
             <div class="w-full aspect-[3/4] relative bg-surface-container overflow-hidden">
               <img class="product-card-img w-full h-full object-cover variant-img-fade group-hover:scale-105 transition-transform duration-700 ease-in-out" 
@@ -264,7 +261,6 @@
                 <div class="font-body-md text-sm font-bold text-primary mt-1 mb-3">₹8,500 / meter</div>
               </div>
 
-              <!-- Swatches -->
               <div class="flex items-center justify-between border-t border-hairline pt-3">
                 <span class="selected-color-label font-label-caps text-[10px] text-on-surface-variant">Emerald Gold</span>
                 <div class="flex gap-2">
@@ -276,7 +272,7 @@
             </div>
           </article>
 
-          <!-- Card 3: Midnight Indigo Motif -->
+          <!-- Card 3 -->
           <article class="product-card flex flex-col bg-surface-bright border border-hairline rounded overflow-hidden group hover:shadow-diffused transition-all duration-500" data-product-id="ARV-004" data-selected-color="Indigo Terracotta">
             <div class="w-full aspect-[3/4] relative bg-surface-container overflow-hidden">
               <img class="product-card-img w-full h-full object-cover variant-img-fade group-hover:scale-105 transition-transform duration-700 ease-in-out" 
@@ -302,7 +298,6 @@
                 <div class="font-body-md text-sm font-bold text-primary mt-1 mb-3">₹4,850 / meter</div>
               </div>
 
-              <!-- Swatches -->
               <div class="flex items-center justify-between border-t border-hairline pt-3">
                 <span class="selected-color-label font-label-caps text-[10px] text-on-surface-variant">Indigo Terracotta</span>
                 <div class="flex gap-2">
@@ -474,9 +469,7 @@
         <input id="search-input" type="text" placeholder="Search by weave, silk, cotton, indigo..." 
                class="w-full pl-11 pr-4 py-3 bg-surface-container rounded border border-hairline focus:outline-none focus:border-primary text-sm" />
       </div>
-      <div id="search-results" class="max-h-[350px] overflow-y-auto flex flex-col gap-2 pt-2">
-        <!-- Live JS Search Results -->
-      </div>
+      <div id="search-results" class="max-h-[350px] overflow-y-auto flex flex-col gap-2 pt-2"></div>
     </div>
   </div>
 
